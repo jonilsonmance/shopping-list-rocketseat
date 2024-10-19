@@ -1,0 +1,190 @@
+.main{
+    
+    
+    & .img-title{
+        padding-top: 3.87rem;
+        padding-bottom: 1rem;
+        cursor: pointer;  
+    }
+
+    & h1{
+        color: var(--content-primary);
+        font: var(--title-lg);
+        padding-bottom: 3.43rem;
+    }
+
+    & .input-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+
+        & input{
+            padding-left: 1.125rem;
+            padding-right: 1.125rem;
+            padding: .625rem 1.5rem;
+            border-radius: 0.75rem;
+            border: 2px solid var(--border-primary);
+            background: var(background-secondary);
+            width: 28.18rem;
+            font: var(--label);
+            
+
+            &::placeholder{
+                color: var(--content-tertiary);
+                font: var(--label);
+            }
+            &:focus{
+                border-color:var(--color-brand);
+                outline: none;
+            }
+            &:hover{
+                border-color:var(--border-hover);
+                outline: none;
+            }
+        }
+        & button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-brand);
+            border: none;
+            padding: .625rem 1.5rem;
+            border-radius: .7rem;
+            color: var(--always-white);
+            cursor: pointer;
+        }
+        & button:hover{
+            background-color: var(--color-brand-hover);
+        }
+        
+    }
+
+    & .list{
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        gap: .53rem;
+        padding: .75rem .5rem ;
+        position: relative;
+        background-color: var(--background-secondary);
+        border-radius: .75rem;
+        margin-bottom: .75rem;
+
+        & input[type="checkbox"]{
+            appearance: none;
+            width: 1.125rem;
+            height: 1.125rem;
+            border: 1px solid var(--border-primary);
+            border-radius: 6px;
+            cursor: pointer;
+
+        }
+        & input[type="checkbox"]:checked {
+            background-color: var(--color-brand);
+            border-color: var(--border-hover);
+        }
+
+        & input[type="checkbox"]:checked::after{
+            content: "";
+            position: absolute;
+            top: 35%;
+            left: 2.3%;
+            width: 4px;
+            height: 8px;
+            border: solid var(--always-white);
+            border-width: 0 2px 3px 0;
+            transform: rotate(45deg);
+        }
+
+        & input[type="checkbox"]:hover {
+            border-color: var(--border-hover);
+        }
+
+        
+
+        & p{
+            color: var(--content-secondary);
+            font: var(--paragraph);
+        }
+
+        & img{
+           position: absolute;
+           width: 20px;
+           height: 20px;
+           top: .8rem;
+           right: .8rem;
+           cursor: pointer;
+        }
+
+        
+        
+        
+    }
+
+    & .danger{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:  .75rem;
+        position: relative;
+        background-color: var(--color-danger);
+        color: var(--always-white) ;
+        border-radius: .75rem;
+        margin-bottom: .75rem;
+
+        & .img-phase{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .5rem;
+            
+        }
+
+        & img{
+            cursor: pointer;
+        }
+
+    }
+
+    & .remove{
+        display: none;
+    }
+
+    
+}
+
+
+@media (width <= 25em){
+    .main{
+        
+        & .input-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 20.43rem;
+
+            
+
+            & input{
+                width: 20.43rem;
+            }
+
+            & button{
+                width: 100%;
+            }
+        }
+
+        & .list{
+
+            & input[type="checkbox"]:checked::after{
+                left: 4.5%;
+            }
+
+        }
+
+        
+    }
+}

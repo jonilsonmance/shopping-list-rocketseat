@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping-list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css/index.css">
+</head>
+<body>
+
+    <div id="app">
+        <header>
+            <img src="/assets/logo.svg" alt="">
+        </header>
+
+        <div class="main">
+            <img class="img-title" src="/assets/link button.svg" alt="">
+            <h1>Compras da Semana </h1>
+            <div class="input-wrapper">
+                <input type="text" name="items" id="items" placeholder="Adicione um novo item">
+                <button id="addItemButton">Adicionar item</button>
+            </div>
+
+            <div class="list-container">
+                <!-- Os itens serão adicionados aqui -->
+            </div>
+
+            <div class="danger remove">
+                <div class="img-phase">
+                    <img src="/assets/warning-circle-filled.svg" alt="">
+                    <p>O item foi removido da lista</p>
+                </div>
+                <img src="/assets/delete-small.svg" alt="Fechar aviso" id="closeDangerMessage">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
